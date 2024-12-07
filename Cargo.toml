@@ -1,6 +1,6 @@
 [workspace]
-members = ["physics-integration-layer", "avian2d", "avian3d"]
-default-members = ["."]
+members = ["physics-integration-layer", "avian3d", "demo"]
+default-members = [".", "demo"]
 
 [workspace.package]
 edition = "2021"
