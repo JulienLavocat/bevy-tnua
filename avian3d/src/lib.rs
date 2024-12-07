@@ -253,7 +253,7 @@ fn update_proximity_sensors_system(
                 }
             };
 
-            let query_filter = SpatialQueryFilter::from_excluded_entities([owner_entity]);
+            let query_filter = &SpatialQueryFilter::from_excluded_entities([owner_entity]);
             if let Some(TnuaAvian3dSensorShape(shape)) = shape {
                 let (_, owner_rotation, _) = transform.to_scale_rotation_translation();
                 let owner_rotation = Quat::from_axis_angle(
