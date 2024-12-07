@@ -87,6 +87,8 @@ fn setup_player(
         // The player character needs to be configured as a dynamic rigid body of the physics
         // engine.
         RigidBody::Dynamic,
+        // Mass(80.0),
+        // AngularInertia::default(),
         Collider::capsule(0.5, 1.0),
         // This bundle holds the main components.
         TnuaControllerBundle::default(),
