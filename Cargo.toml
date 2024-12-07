@@ -1,11 +1,6 @@
 [workspace]
-members = [
-    "physics-integration-layer",
-    "rapier2d", "rapier3d",
-    "avian2d", "avian3d",
-    "demos",
-]
-default-members = [".", "demos"]
+members = ["physics-integration-layer", "avian2d", "avian3d"]
+default-members = ["."]
 
 [workspace.package]
 edition = "2021"
@@ -27,9 +22,7 @@ categories.workspace = true
 keywords.workspace = true
 documentation = "https://docs.rs/bevy-tnua"
 readme = "README.md"
-exclude = [
-    "assets",
-]
+exclude = ["assets"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -40,7 +33,7 @@ thiserror = "1.0.53"
 
 [dev-dependencies]
 bevy = { version = "^0.15", default-features = false, features = [
-     "animation",
+    "animation",
     "bevy_asset",
     # "bevy_audio",
     "bevy_gilrs",
@@ -58,7 +51,12 @@ bevy = { version = "^0.15", default-features = false, features = [
     "x11",
     # "filesystem_watcher",
 ] }
-avian3d = { version = "^0.1", features = ["3d", "debug-plugin", "parallel", "parry-f32"] }
+avian3d = { version = "^0.1", features = [
+    "3d",
+    "debug-plugin",
+    "parallel",
+    "parry-f32",
+] }
 bevy-tnua-avian3d = { path = "avian3d" }
 
 [package.metadata.docs.rs]
