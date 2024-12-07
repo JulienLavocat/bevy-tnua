@@ -309,7 +309,7 @@ fn apply_motors_system(
         &mut LinearVelocity,
         &mut AngularVelocity,
         &Mass,
-        &Inertia,
+        &AngularInertia,
         &mut ExternalForce,
         &mut ExternalTorque,
         Option<&TnuaToggle>,
@@ -346,7 +346,7 @@ fn apply_motors_system(
             external_torque.set_torque(
                 // NOTE: I did not actually verify that this is the correct formula. Nothing uses
                 // angular acceleration yet - only angular impulses.
-                inertia.0 * motor.ang.acceleration,
+                inertia.principal * motor.ang.acceleration,
             );
         }
     }
