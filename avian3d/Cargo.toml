@@ -13,7 +13,7 @@ readme = "../README.md"
 
 [dependencies]
 bevy = { version = "^0.15", default-features = false }
-avian3d = { git = "https://github.com/Jondolf/avian", default-features = false, features = ["3d", "debug-plugin", "parallel"] }
+avian3d = { git = "https://github.com/Jondolf/avian", rev = "c4840ddf4a3adb081bb21c992e524231df83e195", default-features = false, features = ["3d", "debug-plugin", "parallel"] }
 bevy-tnua-physics-integration-layer = { version = "^0.5", path = "../physics-integration-layer" }
 
 [package.metadata.docs.rs]
